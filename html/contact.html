@@ -118,29 +118,41 @@
     <script type="text/javascript">
         $( document ).ready(function() {
             $('#btnSubmit').click( function() {
- 
-                CheckRequiredText($('#txtName'));
-                CheckRequiredText($('#txtEmail'));
-                CheckRequiredText($('#txtBody'));
+                let valid = true;
                 
+                if (!(CheckRequiredText($('#txtName')))) {
+                    valid = false;
+                }
+                if (!(CheckRequiredText($('#txtEmail')))) {
+                    valid = false;
+                }
+                if (!(CheckRequiredText($('#txtBody')))) {
+                    valid = false;
+                }
+                
+                if (valid) {
+                    SendEmail($('#txtName').val(), $('#txtPhoneNumber').val(), $('#txtEmail').val(), $('#txtBody').val());
+                }
             });
             
             function CheckRequiredText(elem) {
                 if (elem.val() == ""){
                     elem.prev().prev().children('.required').css('opacity', 1);
                     elem.prev().prev().children('.required').css('font-size', '12pt');
-                    return true;
+                    return false;
                 } else {
                     elem.prev().prev().children('.required').css('opacity', 0);
                     elem.prev().prev().children('.required').css('font-size', '1pt');
-                    return false;
+                    return true;
                 }
                 
             }
             
             function SendEmail(nameText, phoneNumberText, emailText, bodyText) {
-                swal('Thank you for contacting me!');
+                swal('Thank you for contacting me!')
                 //emailjs.send("derek_geist_gd_gmail_com","portfolio_contact",{name: nameText, phoneNumber: phoneNumberText, email: emailText, body: bodyText});
+                $('input').val('');
+                $('textarea').val('');
             }
         });
     </script>

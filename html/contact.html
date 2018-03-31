@@ -43,12 +43,14 @@
             text-align: left;
         }
         
+        button {
+            height: auto;
+        }
     </style>
 </head>
 <body>
   <div id="wrapper-contact" class="main-container">
        <div class="left-container">
-        <form action="/action_page.php">
           <div class="row">
             <div>
               <label for="fname">First Name</label>
@@ -79,9 +81,8 @@
             </div>
           </div>
           <div class="row">
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" id="btnSubmit">
           </div>
-        </form>
     </div>
     <div class="right-container">
       <h5>Get in Touch</h5>
@@ -101,12 +102,9 @@
     <script src="https://unpkg.com/promise-polyfill@7.1.0/dist/promise.min.js"></script>
     <script type="text/javascript">
         $( document ).ready(function() {
-             swal({
-              title: 'Error!',
-              text: 'Do you want to continue',
-              type: 'error',
-              confirmButtonText: 'Cool'
-             })
+            $('#btnSubmit').click( function() {
+                swal('Thank you for contacting me!')
+            });
         });
     </script>
 </body>

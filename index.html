@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/simple-lightbox.js">var lightbox = $('.gallery a').simpleLightbox(options);
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/simple-lightbox.js"></script>
+    <script>
+      $(function(){
+        var $gallery = $('.gallery a').simpleLightbox();
+
+        $gallery.on('show.simplelightbox', function(){
+          console.log('Requested for showing');
+        })
+        .on('shown.simplelightbox', function(){
+          console.log('Shown');
+        })
+        .on('close.simplelightbox', function(){
+          console.log('Requested for closing');
+        })
+        .on('closed.simplelightbox', function(){
+          console.log('Closed');
+        })
+        .on('change.simplelightbox', function(){
+          console.log('Requested for change');
+        })
+        .on('next.simplelightbox', function(){
+          console.log('Requested for next');
+        })
+        .on('prev.simplelightbox', function(){
+          console.log('Requested for prev');
+        })
+        .on('nextImageLoaded.simplelightbox', function(){
+          console.log('Next image loaded');
+        })
+        .on('prevImageLoaded.simplelightbox', function(){
+          console.log('Prev image loaded');
+        })
+        .on('changed.simplelightbox', function(){
+          console.log('Image changed');
+        })
+        .on('nextDone.simplelightbox', function(){
+          console.log('Image changed to next');
+        })
+        .on('prevDone.simplelightbox', function(){
+          console.log('Image changed to prev');
+        })
+        .on('error.simplelightbox', function(e){
+          console.log('No image found, go to the next/prev');
+          console.log(e);
+        });
+      });
+    </script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+<link rel="stylesheet"type="text/css" href ="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/simplelightbox.css">
+<title>Derek Geist Graphic Design</title>
+<link rel="icon" href="images/raster/circle_logo_icon.png">
+
+
+
+
+  </head>
+  <body>
+<!-- background image top -->
+    <div class="hero-image">
+      <div class="hero-text">
+        <img src="images/raster/circle_logo_white.png" id="mainlogo">
+        <h1>Graphic and Web Design</h1>
+        <p> I am a Graphic &amp; Web Designer from Pittsburgh. I create clean and exciting designs. <br/>I want to help you stand out among the rest with clever thinking and engaging design.
+        </p>
+        <div id="button">
+          <a href="html/contact.html"><button>Contact Me</button></a>
+        </div>
+
+
+      </div>
+      <img src="images/raster/scroll-down.png" id="scroll_down">
+
+      </div>
+
+<div id="wrapper">
+    <div id="description">
+      <h2>I am a Graphic & Web Designer</h2>
+      <p>Design creates an experience to how everyone
+       interacts and interprets information and space.
+       I am passionate about results-driven, visually striking design
+       that positively impacts the course of clients’ businesses and lives.
+     </p>
+
+    </div>
+
+
+    <div id="childpages">
+      <a href="html/about.html" id="about">
+        <h3>About</h3>
+      </a>
+
+        <a href="html/resume.html" id="resume">
+          <h3>Résumé</h3>
+        </a>
+    </div>
+        <div class="gallery">
+              <h2>My Work</h2>
+              <br/>
+              <div class="flex-container">
+                  <a href="images/splash-boomhower-2.png"><img src="images/thumbs/splash-boomhower-2_thumb.png" alt="" title="" style="width: 100%"/></a>
+                  <a href="images/burrow-logo.png"><img src="images/thumbs/burrow-logo_thumb.png" alt="" title="The Burrow"style="width: 100%"/></a>
+                  <a href="images/freeport-soccer.png"><img src="images/thumbs/freeport-soccer_thumb.png" alt="" title="" style="width: 100%"/></a>
+
+                  <a href="images/nh_indians.png"><img src="images/thumbs/nh-indians_thumb.png" alt="" title="" style="width: 100%"/></a>
+                  <a href="images/la-roche.png"><img src="images/thumbs/la-roche_thumb.png" alt="" title="" style="width: 100%"/></a>
+                  <a href="images/berkely_hills.png"><img src="images/thumbs/berkely_hills_thumb.png" alt="" title="" style="width: 100%"/></a>
+
+
+                  <a href="images/splash-color-run.png"><img src="images/thumbs/splash-color-run_thumb.png" alt="" title="" style="width: 100%"/></a>
+                  <a href="images/splash-20-years.png"><img src="images/thumbs/splash-20-years_thumb.png" alt="" title="" style="width: 100%"/></a>
+              </div>
+        </div>
+    <div id="footer">
+
+
+    </div>
+
+
+
+
+  </div>
+  </body>
+
+</html>

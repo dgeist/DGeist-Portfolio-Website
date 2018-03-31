@@ -1,78 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
 
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet"type="text/css" href ="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/simplelightbox.css">
+    <title>Derek Geist Graphic Design</title>
+    <link rel="icon" href="../images/raster/circle_logo_icon.png">
+    <style type="text/css">
+        .main-container {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+             justify-content: space-around;
+        }
+        
+        .left-container {
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            padding: 20px;
+            width: 45%;
+            border: 1px;
+            border-color: #000000;
+        }
+        
+        .right-container{
+            float: left;
+            background-color: #999999;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 45%;
+        }
+        
+        .left-container, .right-container {
+            text-align: left;
+        }
+        
+    </style>
+</head>
+<body>
+  <div id="wrapper-contact" class="main-container">
+       <div class="left-container">
+        <form action="/action_page.php">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="firstname" placeholder="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="lastname" placeholder="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="email">Email</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="email" name="email" placeholder="">
+            </div>
+          </div>
 
-<link rel="stylesheet"type="text/css" href ="../css/styles.css">
-<link rel="stylesheet" type="text/css" href="../css/simplelightbox.css">
-<title>Derek Geist Graphic Design</title>
-<link rel="icon" href="../images/raster/circle_logo_icon.png">
-
-
-
-
-  </head>
-  <body>
-    <div id="wrapper-contact">
-          <div class="container">
-    <form action="/action_page.php">
-      <div class="row">
-        <div class="col-25">
-          <label for="fname">First Name</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="fname" name="firstname" placeholder="">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="lname">Last Name</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="lname" name="lastname" placeholder="">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-25">
-          <label for="email">Email</label>
-        </div>
-        <div class="col-75">
-          <input type="text" id="email" name="email" placeholder="">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-25">
-          <label for="subject">Your Message</label>
-        </div>
-        <div class="col-75">
-          <textarea id="subject" name="subject" placeholder="" style="height:200px"></textarea>
-        </div>
-      </div>
-      <div class="row">
-        <input type="submit" value="Submit">
-      </div>
-    </form>
-
-</div>
-<div class="my-info">
-  <h5>Get in Touch</h5>
-
-  <h6>Email</h6>
-  <p>derek.geist.gd@gmail.com<p>
-
-  <h6>Phone</h6>
-  <p>814-952-9276<p>
-
-  <h6>Connect<h6>
-  <a href="https://www.linkedin.com/in/derek-geist" id="linkedin" target="_blank">https://www.linkedin.com/in/derek-geist</a>
-</div>
-
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Your Message</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="subject" placeholder="" style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
     </div>
+    <div class="right-container">
+      <h5>Get in Touch</h5>
 
+      <h6>Email</h6>
+      <p>derek.geist.gd@gmail.com<p>
 
+      <h6>Phone</h6>
+      <p>814-952-9276<p>
 
-  </body>
+      <h6>Connect<h6>
+      <a href="https://www.linkedin.com/in/derek-geist" id="linkedin" target="_blank">https://www.linkedin.com/in/derek-geist</a>
+    </div>
+ </div>
+</body>
+</html>

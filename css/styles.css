@@ -238,16 +238,7 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
-.container {
-    border-radius: 5px;
-    background-color: #f1f1f1;
-    padding: 20px;
-    width: 50%;
-    float: left;
-    margin: 0px auto;
-    border: 1px;
-    border-color: #000000;
-}
+
 input, textarea{
   background-color: #f2f2f2;
 }
@@ -269,15 +260,6 @@ input, textarea{
     content: "";
     display: table;
     clear: both;
-}
-.my-info{
-  float: left;
-  background-color: #999999;
-  padding: 20px;
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  width: 40%;
 }
 
 

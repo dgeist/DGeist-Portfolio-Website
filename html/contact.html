@@ -151,7 +151,7 @@
             function SendEmail(nameText, phoneNumberText, emailText, bodyText) {
                 swal('Thank you for contacting me!')
                 //emailjs.send("derek_geist_gd_gmail_com","portfolio_contact",{name: nameText, phoneNumber: phoneNumberText, email: emailText, body: bodyText});
-                $('input').val('');
+                $('input[type=text]').val('');
                 $('textarea').val('');
             }
         });

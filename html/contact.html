@@ -52,6 +52,14 @@
         button {
             height: auto;
         }
+        
+        .required {
+            color: red;
+            opacity: 0;
+            font-size: 1pt;
+            transition: 500ms ease-in all;
+        }
+        
     </style>
 </head>
 <body>
@@ -59,21 +67,21 @@
        <div class="left-container">
           <div class="row">
             <div>
-              <label for="txtNamename">Name</label>
+              <label for="txtName">Name <span class="required">*required</span></label>
               <br/>
               <input type="text" id="txtName" name="name" placeholder="">
             </div>
           </div>
           <div class="row">
             <div >
-              <label for="txtPhoneNumber">Phone Number</label>
+              <label for="txtPhoneNumber">Phone Number (optional)</label>
               <br/>
               <input type="text" id="txtPhoneNumber" name="phoneNumber" placeholder="">
             </div>
           </div>
           <div class="row">
             <div >
-              <label for="email">Email</label>
+              <label for="email">Email <span class="required">*required</span></label>
               <br/>
               <input type="text" id="txtEmail" name="email" placeholder="">
             </div>
@@ -81,7 +89,7 @@
 
           <div class="row">
             <div >
-              <label for="body">Your Message</label>
+              <label for="body">Your Message <span class="required">*required</span></label>
               <br/>
               <textarea id="txtBody" name="body" placeholder="" style="height:200px"></textarea>
             </div>
@@ -110,14 +118,30 @@
     <script type="text/javascript">
         $( document ).ready(function() {
             $('#btnSubmit').click( function() {
-                swal('Thank you for contacting me!')
-                let nameText = $('#txtName').val();
-                let phoneNumberText = $('#txtPhoneNumber').val();
-                let emailText = $('#txtEmail').val();
-                let bodyText = $('#txtBody').val();
+ 
+                CheckRequiredText($('#txtName'));
+                CheckRequiredText($('#txtEmail'));
+                CheckRequiredText($('#txtBody'));
                 
-                emailjs.send("derek_geist_gd_gmail_com","portfolio_contact",{name: nameText, phoneNumber: phoneNumberText, email: emailText, body: bodyText});
             });
+            
+            function CheckRequiredText(elem) {
+                if (elem.val() == ""){
+                    elem.prev().prev().children('.required').css('opacity', 1);
+                    elem.prev().prev().children('.required').css('font-size', '12pt');
+                    return true;
+                } else {
+                    elem.prev().prev().children('.required').css('opacity', 0);
+                    elem.prev().prev().children('.required').css('font-size', '1pt');
+                    return false;
+                }
+                
+            }
+            
+            function SendEmail(nameText, phoneNumberText, emailText, bodyText) {
+                swal('Thank you for contacting me!');
+                //emailjs.send("derek_geist_gd_gmail_com","portfolio_contact",{name: nameText, phoneNumber: phoneNumberText, email: emailText, body: bodyText});
+            }
         });
     </script>
 </body>

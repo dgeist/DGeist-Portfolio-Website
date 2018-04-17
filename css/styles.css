@@ -158,9 +158,7 @@ font-family: 'Roboto Slab', serif;
   text-decoration: none;
   font-family: 'Ubuntu' , sans-serif;
 }
-#linkedin:hover{
-  text-decoration: underline;
-}
+
 
 #about:hover, #resume:hover{
   opacity:.5;
@@ -252,6 +250,10 @@ input, textarea{
     float: left;
     width: 75%;
     margin-top: 6px;
+}
+a:visited{
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 /* Clear floats after the columns */

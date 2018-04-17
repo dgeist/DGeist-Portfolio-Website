@@ -28,7 +28,7 @@
             -webkit-flex-flow: row wrap;
              justify-content: space-around;
         }
-        
+
         .left-container {
             border-radius: 5px;
             padding: 20px;
@@ -36,35 +36,135 @@
             border: 1px;
             border-color: #000000;
         }
-        
+
+
         .right-container{
             float: left;
-            background-color: #999999;
             padding: 20px;
             box-sizing: border-box;
             width: 49%;
         }
-        
+
         .left-container, .right-container {
             text-align: left;
         }
-        
+
         button {
             height: auto;
         }
-        
+
         .required {
             color: red;
             opacity: 0;
             font-size: 1pt;
             transition: 500ms ease-in all;
         }
-        
+        header{
+          background-color: #404041;
+          width: 100%;
+          height: 80px;
+          align-items: center;
+          display: flex;
+        }
+      h4{
+        font-family: 'Roboto Slab' , serif;
+        font-size: 20px;
+        color: #404041;
+        line-height: 0;
+
+      }
+    h6{
+      color: #404041;
+      font-size: 15px;
+      line-height: 0;
+    }
+    label{
+      color: #404041;
+      font-size: 15px;
+      line-height: 0;
+      font-weight: bold;
+      line-height: 1
+
+    }
+    .left-container p{
+      font-size: 13px;
+      line-height: 1.5;
+
+    }
+    .right-container p{
+      font-size: 13px;
+      line-height: 0;
+
+    }
+      header a{
+          font-family: 'Ubuntu', sans-serif;
+          text-decoration: none;
+        }
+    .right-container a{
+          color: #000000;
+        }
+    a:visited{
+          text-decoration: none;
+        }
+    #back-arrow{
+        height: 30px;
+        padding: 25px;
+
+        }
+    #back-arrow:hover{
+          background-color: #000000;
+          transition: .5s;
+        }
+    #linkedin{
+      font-weight: normal;
+      font-size: 13px;
+    }
+    #linkedin:hover{
+      text-decoration: none;
+      color: #444444;
+      transition: .3s;
+    }
+    #btnSubmit{
+      background-color: #404041;
+    }
+    #btnSubmit:hover{
+      background-color: #323132;
+      transition: .3s;
+    }
+    #dg-logo{
+      height: 70%;
+      padding-left: 20px;
+    }
+    strong{
+      font-family: 'Roboto Slab' , serif;
+      color: #FFFFFF;
+      font-weight: normal;
+      font-size: 20px;
+      padding-left: 10px;
+      line-height: 1;
+    }
+    em{
+      font-family: 'Ubuntu', sans-serif;
+      color: #FFFFFF;
+      font-style: normal;
+      font-size: 15.5px;
+        }
+
     </style>
 </head>
 <body>
+  <header>
+    <a href="../index.html"><img id="back-arrow" src="../images/raster/back-arrow.png"></a>
+    <img src="../images/raster/circle_logo_white.png" id="dg-logo" alt="dg logo">
+    <strong>Derek Geist
+    <br/>
+    <em>Graphic & Web Designer</em></strong>
+  </header>
   <div id="wrapper-contact" class="main-container">
        <div class="left-container">
+         <h4>Contact Me</h4>
+         <p>Interested in working with me for your next project? Please fill out this form
+           and let's get started!
           <div class="row">
             <div>
               <label for="txtName">Name <span class="required">*required</span></label>
@@ -100,7 +200,7 @@
           </div>
     </div>
     <div class="right-container">
-      <h5>Get in Touch</h5>
+      <h4>Get in Touch</h4>
 
       <h6>Email</h6>
       <p>derek.geist.gd@gmail.com<p>
@@ -108,7 +208,7 @@
       <h6>Phone</h6>
       <p>814-952-9276<p>
 
-      <h6>Connect<h6>
+      <h6>Let's Connect<h6>
       <a href="https://www.linkedin.com/in/derek-geist" id="linkedin" target="_blank">https://www.linkedin.com/in/derek-geist</a>
     </div>
  </div>
@@ -119,7 +219,7 @@
         $( document ).ready(function() {
             $('#btnSubmit').click( function() {
                 let valid = true;
-                
+
                 if (!(CheckRequiredText($('#txtName')))) {
                     valid = false;
                 }
@@ -129,12 +229,12 @@
                 if (!(CheckRequiredText($('#txtBody')))) {
                     valid = false;
                 }
-                
+
                 if (valid) {
                     SendEmail($('#txtName').val(), $('#txtPhoneNumber').val(), $('#txtEmail').val(), $('#txtBody').val());
                 }
             });
-            
+
             function CheckRequiredText(elem) {
                 if (elem.val() == ""){
                     elem.prev().prev().children('.required').css('opacity', 1);
@@ -145,9 +245,9 @@
                     elem.prev().prev().children('.required').css('font-size', '1pt');
                     return true;
                 }
-                
+
             }
-            
+
             function SendEmail(nameText, phoneNumberText, emailText, bodyText) {
                 swal('Thank you for contacting me!')
                 //emailjs.send("derek_geist_gd_gmail_com","portfolio_contact",{name: nameText, phoneNumber: phoneNumberText, email: emailText, body: bodyText});

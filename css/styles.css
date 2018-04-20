@@ -276,6 +276,18 @@ a:visited{
   color: #FFFFFF;
 }
 
+#Get-in-touch{
+  text-align: center;
+}
+
+#footer img{
+  padding-right: 1em;
+}
+
+button {
+  cursor: pointer;
+}
+
 /* Clear floats after the columns */
 .row:after {
     content: "";

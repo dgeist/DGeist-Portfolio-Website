@@ -277,11 +277,32 @@ a:visited{
 }
 
 #Get-in-touch{
-  text-align: center;
+  text-align: left;
+  width: 40%;
 }
 
-#footer img{
-  padding-right: 1em;
+#footer p{
+  align-content: center;
+  margin-left: 1em;
+  margin-top: .5em;
+  height: 2em;
+}
+
+.footer-icon-container{
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+}
+
+.footer-item-container {
+  text-align: left;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
 button {
